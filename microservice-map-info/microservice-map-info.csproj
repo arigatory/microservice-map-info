@@ -8,7 +8,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.50.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="Protos\distance.proto" GrpcServices="Server" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Protos\" />
+	</ItemGroup>
+
+	<ItemGroup>
+    <ProjectReference Include="..\GoogleMapInfo\GoogleMapInfo.csproj" />
   </ItemGroup>
 
 </Project>
